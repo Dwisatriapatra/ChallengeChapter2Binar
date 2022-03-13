@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_icon"
+        android:enabled="true"
+        android:icon="@drawable/gojek_home_icon"
+        android:title="home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/promo_icon"
+        android:enabled="true"
+        android:title="promo"
+        android:icon="@drawable/gojek_promos_icon"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/order_icon"
+        android:enabled="true"
+        android:title="order"
+        android:icon="@drawable/gojek_order_icon"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/chat_icon"
+        android:enabled="true"
+        android:title="chat icon"
+        android:icon="@drawable/gojek_chat_icon"
+        app:showAsAction="ifRoom" />
+</menu>

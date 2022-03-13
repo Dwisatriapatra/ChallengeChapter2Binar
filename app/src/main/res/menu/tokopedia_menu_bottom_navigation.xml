@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tokopedia_home_icon"
+        android:enabled="true"
+        android:icon="@drawable/tokopedia_home_icon"
+        android:title="home"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/tokopedia_feed_icon"
+        android:enabled="true"
+        android:title="feed"
+        android:icon="@drawable/tokopedia_feed_icon"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/tokopedia_official_store_icon"
+        android:enabled="true"
+        android:title="official store"
+        android:icon="@drawable/tokopedia_official_store"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/tokopedia_wishlist_icon"
+        android:enabled="true"
+        android:title="wishlist"
+        android:icon="@drawable/tokopedia_wishlist_icon"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/tokopedia_transaksi_icon"
+        android:enabled="true"
+        android:title="transaksi"
+        android:icon="@drawable/tokopedia_transaksi_icon"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+</menu>

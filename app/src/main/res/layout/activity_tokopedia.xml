@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TokopediaActivity">
+    <!--bottom navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/tokopedia_menu_bottom_navigation"/>
+    <!--main body-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--header atas-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/hijau_tokopedia">
+
+                <SearchView
+                    android:id="@+id/search_bar_tokopedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_toStartOf="@+id/chat_icon_tokopedia"
+                    android:background="@drawable/tokopedia_custom_background_search_bar"
+                    android:backgroundTint="@color/white"
+                    app:defaultQueryHint="cari"
+                    app:queryHint="cari"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/chat_icon_tokopedia"
+                    android:src="@drawable/tokopedia_message_icon"
+                    android:layout_toStartOf="@+id/notification_icon_tokopedia"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/notification_icon_tokopedia"
+                    android:src="@drawable/tokopedia_notification_icon"
+                    android:layout_toStartOf="@+id/cart_icon_tokopedia"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/cart_icon_tokopedia"
+                    android:src="@drawable/tokopedia_cart_icon"
+                    android:layout_toStartOf="@+id/more_icon_tokopedia"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/more_icon_tokopedia"
+                    android:src="@drawable/tokopedia_menu_icon"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/hijau_tokopedia"
+                    android:text="Dikirim ke Jakarta Pusat"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <!--bagian saldo-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tokopedia_custom_background_home_saldo">
+                <ImageView
+                    android:id="@+id/saldo_gopay_tokopedia"
+                    android:layout_width="167dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/tokopedia_saldo_gopay_home"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tokopedia_member_home"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/saldo_gopay_tokopedia"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+            <!--main menu-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_official_store_icon"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_lihat_semua_icon"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_kebutuhan_harian_icon"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_handphone_and_tanlet_icon"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_top_up_and_tagihan_icon"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_keuangan_icon"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--iklan-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_iklan"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/tokopedia_iklan"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--main menu-->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:rowCount="1">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:src="@drawable/tokopedia_peduli_lindungi_icon"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="fill"
+                    android:src="@drawable/tokopedia_bangga_lokal_icon"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="fill"
+                    android:src="@drawable/tokopedia_bazar_hari_ini_icon"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/tokopedia_live_shopping_icon"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/tokopedia_tokopedia_seru_icon"
+                    tools:ignore="ContentDescription" />
+            </GridLayout>
+            <!--iklan video menarik-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Video menarik untukmu"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="Lihat semua"
+                    android:textColor="@color/hijau_tokopedia"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:cardMaxElevation="12dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/tokopedia_iklan_video_menarik"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Total bonus 100% menantimu"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:cardMaxElevation="12dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/tokopedia_iklan_video_menarik"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Total bonus 100% menantimu"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:cardMaxElevation="12dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/tokopedia_iklan_video_menarik"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Total bonus 100% menantimu"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:cardMaxElevation="12dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/tokopedia_iklan_video_menarik"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Total bonus 100% menantimu"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--iklan kejar diskon-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kejar diskon"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berakhir dalam 1 jam 29 menit"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="Lihat semua"
+                    android:textColor="@color/hijau_tokopedia"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@color/hijau_tokopedia"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp"
+                            app:cardMaxElevation="12dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:src="@drawable/tokopedia_iklan_kejar_diskon"
+                                    tools:ignore="ContentDescription" />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Rp 30.000 (diskon 30%)"
+                                    android:textSize="11sp"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp"
+                            app:cardMaxElevation="12dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:src="@drawable/tokopedia_iklan_kejar_diskon"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Rp 30.000 (diskon 30%)"
+                                    android:textSize="11sp"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp"
+                            app:cardMaxElevation="12dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:src="@drawable/tokopedia_iklan_kejar_diskon"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Rp 30.000 (diskon 30%)"
+                                    android:textSize="11sp"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp"
+                            app:cardMaxElevation="12dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+                                <ImageView
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:src="@drawable/tokopedia_iklan_kejar_diskon"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Rp 30.000 (diskon 30%)"
+                                    android:textSize="11sp"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
